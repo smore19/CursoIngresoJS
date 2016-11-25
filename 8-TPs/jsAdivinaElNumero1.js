@@ -15,12 +15,65 @@ function comenzar()
 	//Genero el número RANDOM entre 1 y 100
 	 
 		//alert(numeroSecreto );
-	
+		contadorIntentos=0;
+		numeroSecreto=Math.floor((Math.random() *100) + 1);
+
 
 }
 
 function verificar()
 {
-	
-	
+	var numeroIngresado;
+
+	contadorIntentos= contadorIntentos+1; //figura NaN porque no es un número, es letra. 
+	console.log("el contador: "+contadorIntentos);
+	document.getElementById('intentos').value=contadorIntentos;
+
+
+    numeroIngresado=document.getElementById('numero').value;
+    if(numeroIngresado==numeroSecreto)
+
+    {
+
+    	alert("gano");
+    	if(contadorIntentos>10);
+    	{
+          alert("afortunado en el amor");
+
+    	}
+
+    	if(contadorIntentos>6&& contadorIntentos<11)
+
+    	{
+
+           alert("falta tecnica");
+    	}
+
+    	if(contadorIntentos==5)
+    	{
+         alert("usted esta en la media")
+
+    	}
+
+    }
+else
+
+{
+        if(numeroSecreto>numeroIngresado)
+        {
+             alert("falta");
+
+
+        }
+
+        else 
+        {
+
+        	alert("te pasaste");
+
+        }
+
+
+}
+
 }
